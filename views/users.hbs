@@ -1,0 +1,36 @@
+{{> nav}}
+
+<div class="container">
+  <div class="title-container">
+    <h1 class="title">List all users!</h1>
+
+    <a href="/createuser" class="button-primary">Add User</a>
+  </div>
+
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Lastname</th>
+      <th>Login</th>
+      <th>Password</th>
+      <th>Actions</th>
+    </tr>
+    {{#each users}}
+      <tr>
+        <td>{{NAME}}</td>
+        <td>{{LASTNAME}}</td>
+        <td>{{LOGIN}}</td>
+        <td>{{PASSWORD}}</td>
+        <td>
+          <a href="/deleteUser/{{id}}">
+            <button>Delete</button>
+          </a>
+          <a href="/editUser/{{id}}">
+            <button>Edit</button>
+          </a>
+        </td>
+      </tr> 
+    {{/each}}
+     
+</table>
+</div>

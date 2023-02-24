@@ -1,0 +1,24 @@
+{{> nav}}
+
+<div class="container">
+  <div class="title-container">
+    <h1 class="title">Edit food!</h1>
+  </div>
+
+  <div class="form-card">
+    <form action="/updateFoodAtDatabase/{{food.id}}" method="POST">
+
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Food name.." value="{{food.NAME}}">
+
+      <label for="description">Description</label>
+      <input type="text" id="description" name="description" placeholder="Food description.."  value="{{food.DESCRIPTION}}">
+      
+      
+      <label for="price">Price</label>
+      <input type="text" id="price" name="price" placeholder="Ex: 29.99"  value="{{food.PRICE}}">
+
+      <input type="submit" value="Save updates">
+    </form>
+  </div>
+</div>

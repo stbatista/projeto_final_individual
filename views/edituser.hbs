@@ -1,0 +1,26 @@
+{{> nav}}
+
+<div class="container">
+  <div class="title-container">
+    <h1 class="title">Update User!</h1>
+  </div>
+
+  <div class="form-card">
+    <form action="/updateUserAtDatabase/{{user.id}}" method="POST">
+
+      <label for="name">Name</label>
+      <input type="text" id="NAME" name="NAME" placeholder="First name..." value="{{user.NAME}}">
+
+      <label for="description">Lastname</label>
+      <input type="text" id="LASTNAME" name="LASTNAME" placeholder="Lastname..." value="{{user.LASTNAME}}">
+     
+      <label for="description">Login</label>
+      <input type="text" id="LOGIN" name="LOGIN" placeholder="Login..." value="{{user.LOGIN}}">
+      
+      <label for="price">Password</label>
+      <input type="text" id="PASSWORD" name="PASSWORD" value="{{user.PASSWORD}}">
+
+      <input type="submit" value="Save updates">
+    </form>
+  </div>
+</div>

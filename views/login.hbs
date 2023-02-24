@@ -1,0 +1,16 @@
+<div class="container login-card">
+  <div class="form-card">
+    <form action="/loginAtDatabase" method="POST">
+
+      <label for="name">Username</label>
+      <input type="text" id="username" name="username" placeholder="username">
+
+      <label for="description">Password</label>
+      <input type="password" id="password" name="password" placeholder="password">
+
+      <input type="submit" value="Login">
+    </form>
+
+    <span style="color: red">{{errorLogin}}</span>
+  </div>
+</div>

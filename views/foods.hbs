@@ -1,0 +1,34 @@
+{{> nav}}
+
+<div class="container">
+  <div class="title-container">
+    <h1 class="title">List all foods!</h1>
+
+    <a href="/createfood" class="button-primary">Add Food</a>
+  </div>
+
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Value</th>
+      <th>Actions</th>
+    </tr>
+    {{#each foods}}
+      <tr>
+        <td>{{NAME}}</td>
+        <td>{{DESCRIPTION}}</td>
+        <td>{{PRICE}}</td>
+        <td>
+          <a href="/deleteFood/{{id}}">
+            <button>Delete</button>
+          </a>
+          <a href="/editFood/{{id}}">
+            <button>Edit</button>
+          </a>
+        </td>
+      </tr> 
+    {{/each}}
+     
+</table>
+</div>

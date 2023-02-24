@@ -1,0 +1,26 @@
+{{> nav}}
+
+<div class="container">
+  <div class="title-container">
+    <h1 class="title">Create new food!</h1>
+
+    <a href="/foods" class="button-primary">List Foods</a>
+  </div>
+
+  <div class="form-card">
+    <form action="/createFoodAtDatabase" method="POST">
+
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Food name..">
+
+      <label for="description">Description</label>
+      <input type="text" id="description" name="description" placeholder="Food description..">
+      
+      
+      <label for="price">Price</label>
+      <input type="text" id="price" name="price" placeholder="Ex: 29.99">
+
+      <input type="submit" value="Create food">
+    </form>
+  </div>
+</div>
